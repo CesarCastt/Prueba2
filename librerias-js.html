@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Validate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        label.error{
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Ejemplo Jquery Validate</h1>
+
+    <form class="container" id="formulario">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" class="form-control" id="email" name="email">
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+      <script>
+        $(document).ready(function() {
+
+
+            $("#formulario").validate({
+                rules:{
+                    nombre:{
+                        required: true,
+                        minlenght: 3
+                    },
+                    email:{
+                        required: true,
+                        minlenght: 10,
+                        email: true
+                    }
+                },
+                messages:{
+                    nombre: {
+                        required: "Ingresa algo po!",
+                        minlenght: "Longitud mínima es de 3 caracteres"                       
+                    },
+                    email:{
+                        required: "Campo requerido!!!",
+                        minlenght: "Longitud mínima es de 10 caracteres",
+                        email: "No es un email!!!!!!"
+                    }
+                }
+            })
+        })
+
+
+      </script>
+
+
+
+
+
+</body>
+</html>
