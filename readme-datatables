@@ -1,0 +1,15 @@
+Esta librería sirve para que cualquier tabla de datos pueda:
+    Tener un cuadro de búsqueda para poder filtrar fácilemtne cualquier valor de la tabla.
+    Función de ordenamiento por columna, al hacer click en la cabecera de la misma.
+    Paginación para navegar entre resultados, cuando haya gran cantidad de datos
+
+    documentación: https://datatables.net/
+
+
+    tres pasos:
+
+    agregar archivo de estilos css
+    agregar script
+    incializar la tabla por su id (ver código js al final)
+
+

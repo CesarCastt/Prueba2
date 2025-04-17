@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla de Usuarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+</head>
+<body class="p-4">
+
+  <h2 class="mb-4">Lista de Usuarios (50 registros)</h2>
+
+  <div class="table-responsive">
+    <table id="usuarios" class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+          <th>Ciudad</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr><td>1</td><td>Juan González</td><td>juan.gonzalez1@correo.com</td><td>+56 9 82345678</td><td>Santiago</td></tr>
+          <tr><td>2</td><td>María Pérez</td><td>maria.perez2@correo.com</td><td>+56 9 91234567</td><td>Valparaíso</td></tr>
+          <tr><td>3</td><td>Pedro Ramírez</td><td>pedro.ramirez3@correo.com</td><td>+56 9 93456789</td><td>Concepción</td></tr>
+          <tr><td>4</td><td>Lucía Fernández</td><td>lucia.fernandez4@correo.com</td><td>+56 9 94567890</td><td>La Serena</td></tr>
+          <tr><td>5</td><td>Mateo Díaz</td><td>mateo.diaz5@correo.com</td><td>+56 9 95678901</td><td>Temuco</td></tr>
+          <tr><td>6</td><td>Sofía Martínez</td><td>sofia.martinez6@correo.com</td><td>+56 9 96789012</td><td>Antofagasta</td></tr>
+          <tr><td>7</td><td>Jorge López</td><td>jorge.lopez7@correo.com</td><td>+56 9 97890123</td><td>Rancagua</td></tr>
+          <tr><td>8</td><td>Camila Rodríguez</td><td>camila.rodriguez8@correo.com</td><td>+56 9 98901234</td><td>Santiago</td></tr>
+          <tr><td>9</td><td>Carlos González</td><td>carlos.gonzalez9@correo.com</td><td>+56 9 99812345</td><td>Valparaíso</td></tr>
+          <tr><td>10</td><td>Ana Díaz</td><td>ana.diaz10@correo.com</td><td>+56 9 98987654</td><td>Temuco</td></tr>
+          <tr><td>11</td><td>Diego Martínez</td><td>diego.martinez11@correo.com</td><td>+56 9 97654321</td><td>Concepción</td></tr>
+          <tr><td>12</td><td>Valentina Ramírez</td><td>valentina.ramirez12@correo.com</td><td>+56 9 96543210</td><td>Antofagasta</td></tr>
+          <tr><td>13</td><td>Tomás Pérez</td><td>tomas.perez13@correo.com</td><td>+56 9 95432109</td><td>Santiago</td></tr>
+          <tr><td>14</td><td>Emilia Fernández</td><td>emilia.fernandez14@correo.com</td><td>+56 9 94321098</td><td>Valparaíso</td></tr>
+          <tr><td>15</td><td>Agustín Rodríguez</td><td>agustin.rodriguez15@correo.com</td><td>+56 9 93210987</td><td>Rancagua</td></tr>
+          <tr><td>16</td><td>Isidora López</td><td>isidora.lopez16@correo.com</td><td>+56 9 92109876</td><td>La Serena</td></tr>
+          <tr><td>17</td><td>Benjamín González</td><td>benjamin.gonzalez17@correo.com</td><td>+56 9 91098765</td><td>Antofagasta</td></tr>
+          <tr><td>18</td><td>Josefa Díaz</td><td>josefa.diaz18@correo.com</td><td>+56 9 90987654</td><td>Temuco</td></tr>
+          <tr><td>19</td><td>Martina Ramírez</td><td>martina.ramirez19@correo.com</td><td>+56 9 89876543</td><td>Santiago</td></tr>
+          <tr><td>20</td><td>Vicente López</td><td>vicente.lopez20@correo.com</td><td>+56 9 88765432</td><td>Valparaíso</td></tr>
+          <tr><td>21</td><td>Antonia Fernández</td><td>antonia.fernandez21@correo.com</td><td>+56 9 87654321</td><td>Concepción</td></tr>
+          <tr><td>22</td><td>Matías Rodríguez</td><td>matias.rodriguez22@correo.com</td><td>+56 9 86543210</td><td>Antofagasta</td></tr>
+          <tr><td>23</td><td>Florencia Pérez</td><td>florencia.perez23@correo.com</td><td>+56 9 85432109</td><td>Santiago</td></tr>
+          <tr><td>24</td><td>Gaspar Martínez</td><td>gaspar.martinez24@correo.com</td><td>+56 9 84321098</td><td>Temuco</td></tr>
+          <tr><td>25</td><td>Renata González</td><td>renata.gonzalez25@correo.com</td><td>+56 9 83210987</td><td>La Serena</td></tr>
+          <tr><td>26</td><td>Elías Ramírez</td><td>elias.ramirez26@correo.com</td><td>+56 9 82109876</td><td>Valparaíso</td></tr>
+          <tr><td>27</td><td>Trinidad Díaz</td><td>trinidad.diaz27@correo.com</td><td>+56 9 81098765</td><td>Santiago</td></tr>
+          <tr><td>28</td><td>Felipe Rodríguez</td><td>felipe.rodriguez28@correo.com</td><td>+56 9 80987654</td><td>Antofagasta</td></tr>
+          <tr><td>29</td><td>Amanda López</td><td>amanda.lopez29@correo.com</td><td>+56 9 79876543</td><td>Concepción</td></tr>
+          <tr><td>30</td><td>Joaquín Fernández</td><td>joaquin.fernandez30@correo.com</td><td>+56 9 78765432</td><td>Temuco</td></tr>
+          <tr><td>31</td><td>Fernanda Pérez</td><td>fernanda.perez31@correo.com</td><td>+56 9 77654321</td><td>Rancagua</td></tr>
+          <tr><td>32</td><td>Simón Ramírez</td><td>simon.ramirez32@correo.com</td><td>+56 9 76543210</td><td>Santiago</td></tr>
+          <tr><td>33</td><td>Paula Díaz</td><td>paula.diaz33@correo.com</td><td>+56 9 75432109</td><td>La Serena</td></tr>
+          <tr><td>34</td><td>Daniel Rodríguez</td><td>daniel.rodriguez34@correo.com</td><td>+56 9 74321098</td><td>Antofagasta</td></tr>
+          <tr><td>35</td><td>Constanza López</td><td>constanza.lopez35@correo.com</td><td>+56 9 73210987</td><td>Temuco</td></tr>
+          <tr><td>36</td><td>Maximiliano Fernández</td><td>max.fernandez36@correo.com</td><td>+56 9 72109876</td><td>Concepción</td></tr>
+          <tr><td>37</td><td>Jose Ignacio González</td><td>jose.gonzalez37@correo.com</td><td>+56 9 71098765</td><td>Rancagua</td></tr>
+          <tr><td>38</td><td>Julieta Ramírez</td><td>julieta.ramirez38@correo.com</td><td>+56 9 70987654</td><td>Valparaíso</td></tr>
+          <tr><td>39</td><td>Ignacio Díaz</td><td>ignacio.diaz39@correo.com</td><td>+56 9 69876543</td><td>Santiago</td></tr>
+          <tr><td>40</td><td>Isabel Martínez</td><td>isabel.martinez40@correo.com</td><td>+56 9 68765432</td><td>Antofagasta</td></tr>
+          <tr><td>41</td><td>Franco Pérez</td><td>franco.perez41@correo.com</td><td>+56 9 67654321</td><td>Temuco</td></tr>
+          <tr><td>42</td><td>Emma Ramírez</td><td>emma.ramirez42@correo.com</td><td>+56 9 66543210</td><td>La Serena</td></tr>
+          <tr><td>43</td><td>León Rodríguez</td><td>leon.rodriguez43@correo.com</td><td>+56 9 65432109</td><td>Concepción</td></tr>
+          <tr><td>44</td><td>Daniela López</td><td>daniela.lopez44@correo.com</td><td>+56 9 64321098</td><td>Santiago</td></tr>
+          <tr><td>45</td><td>Gabriel Fernández</td><td>gabriel.fernandez45@correo.com</td><td>+56 9 63210987</td><td>Valparaíso</td></tr>
+          <tr><td>46</td><td>Victoria González</td><td>victoria.gonzalez46@correo.com</td><td>+56 9 62109876</td><td>Temuco</td></tr>
+          <tr><td>47</td><td>Andrés Ramírez</td><td>andres.ramirez47@correo.com</td><td>+56 9 61098765</td><td>Antofagasta</td></tr>
+          <tr><td>48</td><td>Florencia Díaz</td><td>florencia.diaz48@correo.com</td><td>+56 9 60987654</td><td>Concepción</td></tr>
+          <tr><td>49</td><td>Benjamín Martínez</td><td>benja.martinez49@correo.com</td><td>+56 9 59876543</td><td>La Serena</td></tr>
+          <tr><td>50</td><td>Abril Pérez</td><td>abril.perez50@correo.com</td><td>+56 9 58765432</td><td>Santiago</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+    <script>
+        $(document).ready( function(){
+
+            let table = new DataTable('#usuarios');
+
+        })
+
+
+    </script>
+
+  </body>
+  </html>
