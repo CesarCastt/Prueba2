@@ -28,29 +28,44 @@
       </form>
 
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="js/jquery.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
       <script>
+
+        //crea una función que reciba un rut chileno y lo valide segun la expresion regular correspondiente
+
+        function validarRut(rut) {
+            // Expresión regular para validar el formato del RUT
+            var rutRegex = /^\d{1,2}\.\d{3}\.\d{3}-[0-9kK]$/;
+
+            return rutRegex.test(rut);
+        }
+
+
+
         $(document).ready(function() {
 
 
-            $("#formulario").validate({
+            $("#formulario").validate(
+                {
                 rules:{
                     nombre:{
-                        required: true,
-                        minlenght: 3
+                        minlength: 3,
+                        required: true
                     },
                     email:{
-                        required: true,
-                        minlenght: 10,
-                        email: true
+                        minlength: 10,
+                        email: true,
+                        required: true
                     }
                 },
                 messages:{
                     nombre: {
                         required: "Ingresa algo po!",
-                        minlenght: "Longitud mínima es de 3 caracteres"                       
+                        minlenght: "Longitud mínima es de 3 caracteres"
                     },
                     email:{
                         required: "Campo requerido!!!",
@@ -63,6 +78,8 @@
 
 
       </script>
+
+
 
 
 
