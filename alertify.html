@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo AlertifyJS</title>
+
+  <!-- Estilos de Alertify -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+
+  <style>
+    body {
+      padding: 30px;
+      font-family: Arial;
+    }
+    button {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Ejemplo AlertifyJS</h2>
+
+  <button onclick="alertaSimple()">Alerta Simple</button>
+  <button onclick="alertaConfirmacion()">Confirmación</button>
+  <button onclick="alertaPrompt()">Ingresar Texto</button>
+
+  <!-- JS de Alertify -->
+  <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+  <script>
+    function alertaSimple() {
+        //.alert muestra un mensaje simple sin botones en una ventana emergente
+      alertify.alert("Hola!", "Este es un mensaje simple.");
+    }
+
+    function alertaConfirmacion() {
+        // .confirm muestra un mensaje de confirmación con dos botones (Aceptar y Cancelar)
+        //.confirm recibe cuatro parámetros: 
+        // el título de la ventana, 
+        // el mensaje a mostrar, 
+        // una función que se ejecuta si se hace clic en Aceptar y 
+        // otra función que se ejecuta si se hace clic en Cancelar..... 
+      alertify.confirm("¿Estás seguro?", "Esto no se puede deshacer.",
+      
+
+        function() {
+            //.success muestra un mensaje de éxito de color verde
+          alertify.success("Continuaste");
+        },
+        function() {
+            //.error muestra un mensaje de error de color rojo
+          alertify.error("Cancelado");
+        }
+      );
+    }
+
+    function alertPrompt() {
+        // .prompt muestra un cuadro de entrada de texto con dos botones (Aceptar y Cancelar)
+
+      alertify.prompt("Ingrese su nombre", "",
+        function(evt, value) {
+          alertify.success("Hola " + value);
+        },
+        function() {
+          alertify.error("Cancelado");
+        }
+      );
+    }
+  </script>
+
+</body>
+</html>
