@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Autocomplete jQuery UI</title>
+
+  <!-- jQuery + jQuery UI CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <style>
+    body {
+      padding: 30px;
+      font-family: Arial;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Buscar lenguaje de programación</h2>
+  <input id="lenguaje" placeholder="Ej: JavaScript, Python...">
+
+  <!-- jQuery + jQuery UI JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+  <script>
+    //la librería jQuery UI Autocomplete permite autocompletar un campo de texto con una lista de sugerencias.
+    //que se muestran a medida que el usuario escribe. La lista de sugerencias se puede definir como un array de cadenas 
+    // o como una función que devuelve un array.
+    //sólo se necesita incluir la librería jQuery UI y el CSS correspondiente para que funcione.
+    //El código de llama a la función autocomplete() en el campo de entrada con el id "lenguaje".
+    //Dentro de la función, se define un array de lenguajes de programación que se utilizará como fuente de sugerencias.
+    $(function() {
+      var lenguajes = [
+        "JavaScript", "Python", "Java", "C#", "C++", "PHP", "Ruby", "Go",
+        "Swift", "Kotlin", "TypeScript", "Rust", "Perl", "Scala", "Lua",
+        "Haskell", "Dart", "Objective-C", "Elixir", "R"
+      ];
+
+      $("#lenguaje").autocomplete({
+        source: lenguajes
+      });
+    });
+  </script>
+
+</body>
+</html>
