@@ -1,15 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Empleados y Tareas</title>
+    <link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap -->
+    <script src="js/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <script src="js/jquery.validate.min.js"></script> <!-- jQuery Validate -->
+    <script src="js/gestion-filas.js"></script> <!-- MiniTable -->
+    <script src="js/empleados.js"></script> <!-- Empleados JS -->
 </head>
 <body>
-    
-    <a href="jquery-validate.html">Librería: Jquery Validate</a><br><br>
-    <a href="jquery-datatables.html">Librería: Jquery Datatables</a><br><br>
-    <a href="alertify.html">Librería: Alertify</a><br><br>
-    <a href="jquery-ui-autocomplete.html">Librería: Jquery UI Autocomplete</a><br><br>
+    <div class="container">
+        <!-- Formulario para empleados -->
+        <form id="form-empleado">
+            <input type="text" id="nombreEmpleado" name="nombreEmpleado" placeholder="Nombre del empleado">
+            <button type="submit">Agregar Empleado</button>
+        </form>
+
+        <ul id="listaEmpleados" class="list-group"></ul>
+
+        <!-- Formulario para tareas -->
+        <form id="form-tarea">
+            <input type="text" id="descripcion" placeholder="Descripción de la tarea">
+            <input type="text" id="asignado" placeholder="Empleado asignado">
+            <select id="prioridad">
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+            <button type="submit">Agregar Tarea</button>
+            <button type="button" id="btn-limpiar">Limpiar</button>
+        </form>
+
+        <!-- Tabla de tareas -->
+        <table id="tabla-tareas">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descripción</th>
+                    <th>Asignado</th>
+                    <th>Prioridad</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Alertify.js for notifications (optional) -->
+    <script src="js/alertify.min.js"></script>
 </body>
 </html>

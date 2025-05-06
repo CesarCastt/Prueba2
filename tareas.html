@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Tareas</title>
+
+  <!-- CSS locales -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/alertify.min.css" />
+  <link rel="stylesheet" href="css/themes/default.min.css" />
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <br>
+  <h1 class="text-center">Gestión de Tareas</h1>
+  <br>
+
+  <div class="container">
+    <h3>Formulario de Asignación de Tareas</h3>
+    <br>
+
+    <form id="form-tarea">
+      <label for="descripcion" class="form-label">Descripción de la tarea</label>
+      <input type="text" class="form-control" id="descripcion" name="descripcion">
+      <br>
+
+      <label for="asignado" class="form-label">Empleado asignado</label>
+      <input type="text" class="form-control" id="asignado" name="asignado">
+      <br>
+
+      <label for="prioridad" class="form-label">Prioridad</label>
+      <select class="form-select" id="prioridad" name="prioridad">
+        <option value="">Seleccione</option>
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+      </select>
+      <br>
+
+      <button type="submit" class="btn btn-success">Guardar Tarea</button>
+      <button type="button" id="btn-limpiar" class="btn btn-secondary">Limpiar</button>
+    </form>
+
+    <br><br>
+
+    <h3>Lista de Tareas Asignadas</h3>
+    <br>
+
+    <table id="tabla-tareas" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Descripción</th>
+          <th>Empleado</th>
+          <th>Prioridad</th>
+          <th>Estado</th>
+          <th>Cambiar Estado</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- JS locales -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+  <script src="js/alertify.min.js"></script>
+  <script src="js/tareas.js"></script>
+</body>
+</html>

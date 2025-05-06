@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Empleados y Tareas</title>
+
+  <!-- CSS locales -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/alertify.min.css" />
+  <link rel="stylesheet" href="css/themes/default.min.css" />
+  <link rel="stylesheet" href="css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <br>
+  <h1 class="text-center">Gestión de Empleados y Tareas</h1>
+  <br>
+
+  <div class="container">
+    <!-- Formulario de Empleados -->
+    <h3>Formulario de ingreso de empleado</h3>
+    <form id="form-empleado">
+      <label for="nombreEmpleado" class="form-label">Nombre del empleado</label>
+      <br>
+      <input type="text" class="form-control" id="nombreEmpleado" name="nombreEmpleado" />
+      <br>
+      <button type="submit" class="btn btn-primary">Agregar Empleado</button>
+    </form>
+
+    <br><br>
+
+    <h3>Lista de Empleados Ingresados</h3>
+    <ul id="listaEmpleados" class="list-group"></ul>
+
+    <br><br>
+
+    <!-- Formulario de Asignación de Tareas -->
+    <h3>Formulario de Asignación de Tareas</h3>
+    <form id="form-tarea">
+      <label for="descripcion" class="form-label">Descripción de la tarea</label>
+      <br>
+      <input type="text" class="form-control" id="descripcion" name="descripcion">
+      <br>
+
+      <label for="asignado" class="form-label">Empleado asignado</label>
+      <br>
+      <input type="text" class="form-control" id="asignado" name="asignado">
+      <br>
+
+      <label for="prioridad" class="form-label">Prioridad</label>
+      <br>
+      <select class="form-select" id="prioridad" name="prioridad">
+        <option value="">Seleccione</option>
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+      </select>
+      <br><br>
+
+      <button type="submit" class="btn btn-success">Guardar Tarea</button>
+      <button type="button" id="btn-limpiar" class="btn btn-secondary">Limpiar</button>
+    </form>
+
+    <br><br>
+
+    <h3>Lista de Tareas Asignadas</h3>
+    <table id="tabla-tareas" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Descripción</th>
+          <th>Empleado</th>
+          <th>Prioridad</th>
+          <th>Estado</th>
+          <th>Cambiar Estado</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- JS locales -->
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+  <script src="js/alertify.min.js"></script>
+
+  <!-- Redireccionar al archivo gestión-filas.js -->
+  <script src="js/gestion-filas.js"></script>
+
+  <!-- Script para funcionalidades específicas de empleados y tareas -->
+  <script src="js/empleados.js"></script>
+</body>
+</html>
